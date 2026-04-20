@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 задание</title>
+    <style>
+        .card {
+            background-color: #014242;
+            display: flex;
+            flex-direction: column;
+            max-width: 1000px;
+            max-height: 500px;
+
+        }
+
+        h6 {
+            display: flex;
+            font-weight: 300;
+            color: gray;
+            margin: 25px;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            color: white;
+            margin: 25px;
+            font-size: 1.8rem;
+        }
+
+        img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            margin: 25px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .info-col1, .info-col2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .info span {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        h5 {
+            color: white;
+            font-weight: 200;
+            margin-top: 0;
+            margin-left: 25px;
+        }
+
+
+        @media (max-width: 600px) {
+
+
+            .info-col1 {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+            }
+
+            .info-col2 {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+            }
+
+            .info-col1 h6, .info-col2 h6, .info-col1 h5, .info-col2 h5 {
+                margin: 0;
+            }
+
+            h1 {
+                margin: 20px 25px;
+                font-size: 1.5rem;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h6>Home / Articles /</h6>
+        <h1>
+            The Difference Between <br>
+            Responsive and <br>
+            Adaptive Design
+        </h1>
+
+        <div class="info">
+            <img src="1.png" alt="">
+
+            <div class="info-col1">
+                <span class="Updated">
+                    <h6>Updated</h6>
+                    <h5>Nov 17, 2018</h5>
+                </span>
+                <span class="Comments">
+                    <h6>49 Comments</h6>
+                    <h5>Go to comments</h5>
+                </span>
+            </div>
+
+            <div class="info-col2">
+                <span class="Author">
+                    <h6>Author</h6>
+                    <h5>Nov 17, 2018</h5>
+                </span>
+                <span class="Published">
+                    <h6>Published</h6>
+                    <h5>Nov 11, 2018</h5>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

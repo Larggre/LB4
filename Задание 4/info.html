@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Книжный магазин">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжный магазин — Каталог</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .catalog {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 0 2rem 0;
+        }
+
+        .catalog__title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            border-left: 6px solid #e9c46a;
+            padding-left: 1rem;
+            color: #2c3e2f;
+        }
+
+        .catalog__grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            width: calc(25% - 1.5rem); 
+            min-width: 220px;
+        }
+
+
+        .product-card__info {
+            padding: 1rem 1rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+        }
+
+        .product-card__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e2a23;
+        }
+
+        .product-card__description {
+            font-size: 0.85rem;
+            color: #5a626e;
+            line-height: 1.4;
+        }
+
+        .product-card__price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #b5651e;
+            margin-top: 0.3rem;
+        }
+
+        .product-card__button {
+            background-color: #2c3e2f;
+            color: white;
+            padding: 0.6rem 0;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .product-card__button:hover {
+            background-color: #e9c46a;
+            color: #2c3e2f;
+        }
+
+        @media (max-width: 1024px) {
+            .product-card {
+                width: calc(33.3% - 1.4rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                width: calc(50% - 1rem);
+            }
+            .catalog__title {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .product-card {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"> Книжный мир</div>
+        <nav>
+            <a href="product.html">Главная</a>
+            <a href="product.html">Каталог</a>
+            <a href="product.html">О нас</a>
+            <a href="product.html">Контакты</a>
+            <a href="product.html">Корзина</a>
+        </nav>
+        <div class="search-form">
+            <form action="#">
+                <input type="text" placeholder="Поиск книг...">
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog">
+            <h1 class="catalog__title">Каталог книг</h1>
+            <div class="catalog__grid">
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Мастер и Маргарита</h3>
+                        <p class="product-card__description">Мистический роман Михаила Булгакова, сплетающий библейские сюжеты и сатиру на московскую интеллигенцию.</p>
+                        <span class="product-card__price">550 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Преступление и наказание</h3>
+                        <p class="product-card__description">Психологическая драма Достоевского о студенте Раскольникове и его теории «крови по совести».</p>
+                        <span class="product-card__price">620 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">1984</h3>
+                        <p class="product-card__description">Культовая антиутопия Джорджа Оруэлла о тотальном контроле и потерянной свободе.</p>
+                        <span class="product-card__price">490 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Маленький принц</h3>
+                        <p class="product-card__description">Философская сказка Антуана де Сент-Экзюпери о дружбе, любви и смысле жизни.</p>
+                        <span class="product-card__price">390 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Война и мир</h3>
+                        <p class="product-card__description">Эпопея Льва Толстого, охватывающая судьбы героев на фоне наполеоновских войн.</p>
+                        <span class="product-card__price">890 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Гордость и предубеждение</h3>
+                        <p class="product-card__description">Роман Джейн Остин о сложных отношениях, семейных ценностях и настоящей любви.</p>
+                        <span class="product-card__price">530 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Автостопом по Галактике</h3>
+                        <p class="product-card__description">Бессмертная юмористическая фантастика Дугласа Адамса с ответом на главный вопрос.</p>
+                        <span class="product-card__price">680 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Цветы для Элджернона</h3>
+                        <p class="product-card__description">Трогательная история Дэниела Киза об эксперименте над интеллектом и одиночестве.</p>
+                        <span class="product-card__price">460 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Три товарища</h3>
+                        <p class="product-card__description">Эрих Мария Ремарк о крепкой дружбе, любви и жизни в Германии между войнами.</p>
+                        <span class="product-card__price">600 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img  src="1.jpg" alt="">
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Дюна</h3>
+                        <p class="product-card__description">Эпичная сага Фрэнка Герберта о пустынной планете, специи и борьбе за власть.</p>
+                        <span class="product-card__price">720 ₽</span>
+                        <button class="product-card__button">Добавить в корзину</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Книжный мир. Все права защищены.</p>
+        <div class="social-links">
+            Телефон:<a href="tel:+000000000">+7 (777) 777-77-77 </a> | Email:<a href="mailto:example@mail.com"> info@knigi.ru</a><br>
+            <a href="https://yandex.ru">VK</a> | <a href="https://yandex.ru">Telegram</a> 
+        </div>
+    </footer>
+</body>
+</html>
